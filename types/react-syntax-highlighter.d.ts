@@ -1,3 +1,13 @@
+declare module 'react-syntax-highlighter' {
+  import type { ComponentType } from 'react';
+
+  export const Prism: ComponentType<any>;
+  export const Light: ComponentType<any>;
+
+  const SyntaxHighlighter: ComponentType<any>;
+  export default SyntaxHighlighter;
+}
+
 declare module 'react-syntax-highlighter/dist/esm/styles/prism' {
   export const a11yDark: any;
   export const a11yLight: any;
