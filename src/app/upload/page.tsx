@@ -19,7 +19,10 @@ import {
 
 export default function PDFUpload() {
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState(null);
+  const [message, setMessage] = useState<{
+    type: 'error' | 'success';
+    text: string;
+  } | null>(null);
   const [fileName, setFileName] = useState('');
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
