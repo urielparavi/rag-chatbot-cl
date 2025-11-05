@@ -22,7 +22,7 @@ export default function PDFUpload() {
   const [message, setMessage] = useState(null);
   const [fileName, setFileName] = useState('');
 
-  const handleFileUpload = async (e) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
