@@ -8,7 +8,15 @@ import {
   SignedIn,
 } from '@clerk/nextjs';
 import { Button } from './ui/button';
-import { Brain, Menu, X, Sparkles, FileUp, MessageSquare } from 'lucide-react';
+import {
+  Brain,
+  Menu,
+  X,
+  Sparkles,
+  FileUp,
+  MessageSquare,
+  Home,
+} from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
@@ -131,6 +139,15 @@ export const Navigation = () => {
           {mobileMenuOpen && (
             <div className="md:hidden absolute left-0 right-0 top-full bg-gray-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl animate-in slide-in-from-top-4 duration-300">
               <div className="container mx-auto px-4 py-4 space-y-2">
+                <Link
+                  href="/"
+                  className={`${linkClass('/')} w-full justify-start`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Home className="w-4 h-4" />
+                  <span>Home</span>
+                </Link>
+
                 <Link
                   href="/chat"
                   className={`${linkClass('/chat')} w-full justify-start`}
